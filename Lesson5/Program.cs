@@ -7,12 +7,10 @@ namespace Lesson5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите произвольный набор данных для сохранения их файл");
-            string userData = Console.ReadLine();
-            Console.WriteLine("Введите название файла");
-            string filename = Console.ReadLine();
-            string filename_txt = filename + ".txt";
-            File.WriteAllText(filename_txt, userData);
+            Console.WriteLine("Эта программа дописывает текущее время в файл «startup.txt».");                 
+            string programName = "startup.txt";
+            string userTime = Convert.ToString(DateTime.Now);
+            File.WriteAllText(programName, userTime);
         }
     }
 }
